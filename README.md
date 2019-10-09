@@ -9,4 +9,5 @@ docker-compose down
 
 ## elastic search안뜰때(78번 에러)
 sudo sysctl -w vm.max_map_count=524288
+
 위 명령어로 max_map_count를 늘린다.
