@@ -16,6 +16,23 @@ docker-compose up
 ## 종료 하는 방법
 docker-compose down
 
+## 디렉토리 마운트
+
+기본 설정대로 하면 엘라스틱서치를 내렸다 올리면 넣어 놓았던 데이터가 모두 날아갑니다.
+
+그래서 아래와 같이 volume부분을 <로컬 디렉토리>:/usr/share/elasticsearch/data 로 해주면 데이터가 로컬에 남아 있습니다.
+
+```
+volumes:
+      - esdata1:/usr/share/elasticsearch/data
+```
+를
+```
+volume:
+  - "C:/tmp_elasticsearch:/usr/share/elasticsearch/data"
+```
+로 바꿔주면 됩니다.
+
 ## elastic search안뜰때(78번 에러)
 
 ### linux
@@ -27,3 +44,4 @@ sudo sysctl -w vm.max_map_count=524288
 wsl -d docker-desktop sysctl -w vm.max_map_count=262144
 
 위 명령어로 max_map_count를 늘립니다.
+
