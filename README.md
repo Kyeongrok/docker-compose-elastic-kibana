@@ -45,3 +45,17 @@ wsl -d docker-desktop sysctl -w vm.max_map_count=262144
 
 위 명령어로 max_map_count를 늘립니다.
 
+
+## Arm에서 안뜰 때
+Cpu가 Arm인 경우 아래 에러가 나는 경우가 있습니다.
+
+```
+Error: could not find libjava.so  
+Error: Could not find Java SE Runtime Environment.
+```
+
+아래와 같이 -arm64를 붙여주면 됩니다.
+```
+image: docker.elastic.co/elasticsearch/elasticsearch:7.14.0-arm64
+```
+
