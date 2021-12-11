@@ -1,4 +1,6 @@
 # docker-compose-elastic-kibana
+[![Elastic Stack version](https://img.shields.io/badge/Elastic%20Stack-7.15.2-00bfb3?style=flat&logo=elastic-stack)](https://www.elastic.co/blog/category/releases)
+
 도커 컴포저로 엘라스틱서치와 키바나를 띄웁니다.
 
 ## 실행 방법
